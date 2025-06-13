@@ -7,11 +7,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --primary-pink: #d06fa7;
-      --soft-pink: #fbeaf3;
-      --accent-pink: #f7b4d7;
-      --text-dark: #333;
-      --text-muted: #777;
+      --pastel-pink: #f8e1ea;
+      --light-rose: #f4cdd7;
+      --dusty-rose: #db9cb6;
+      --white: #ffffff;
+      --gray-text: #555;
     }
 
     * {
@@ -22,48 +22,48 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: var(--soft-pink);
-      color: var(--text-dark);
+      background-color: var(--pastel-pink);
+      color: var(--gray-text);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
     }
 
     header {
-      background: linear-gradient(to right, var(--primary-pink), var(--accent-pink));
-      padding: 20px 40px;
-      color: white;
+      background: linear-gradient(to right, var(--dusty-rose), var(--light-rose));
+      padding: 40px 20px;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(208, 111, 167, 0.3);
+      color: var(--white);
+      box-shadow: 0 4px 10px rgba(219, 156, 182, 0.2);
     }
 
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2.8rem;
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
 
     header p {
-      font-size: 1.1rem;
-      color: #fffdfd;
-      margin-top: 8px;
+      font-size: 1.2rem;
+      opacity: 0.9;
     }
 
     main {
       flex: 1;
-      padding: 40px 20px;
+      padding: 60px 20px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
 
     .frame-container {
-      background-color: #fff;
-      border-radius: 16px;
+      background-color: var(--white);
+      border-radius: 20px;
       padding: 30px;
       max-width: 1000px;
       width: 100%;
-      box-shadow: 0 10px 30px rgba(208, 111, 167, 0.2);
-      border: 2px solid #f4d4e6;
+      box-shadow: 0 12px 40px rgba(219, 156, 182, 0.15);
+      border: 1.5px solid #f5d5e2;
     }
 
     iframe {
@@ -71,25 +71,29 @@
       height: 550px;
       border: none;
       border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(208, 111, 167, 0.15);
+      box-shadow: 0 4px 12px rgba(219, 156, 182, 0.1);
     }
 
     footer {
-      background: var(--primary-pink);
-      color: white;
+      background: var(--dusty-rose);
+      color: var(--white);
       text-align: center;
       padding: 16px 20px;
       font-size: 0.95rem;
-      box-shadow: 0 -2px 10px rgba(208, 111, 167, 0.2);
+      box-shadow: 0 -2px 10px rgba(219, 156, 182, 0.2);
     }
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
+      }
+
+      header p {
+        font-size: 1rem;
       }
 
       main {
-        padding: 20px;
+        padding: 30px 15px;
       }
 
       iframe {
@@ -101,7 +105,7 @@
 <body>
   <header>
     <h1>POWER BI 個人專題</h1>
-    <p>A1123309 吳美螢 &mdash; Elegant Pink Dashboard Showcase</p>
+    <p>A1123309 吳美螢 &mdash; Elegant Pastel Pink Dashboard</p>
   </header>
 
   <main>
@@ -114,7 +118,7 @@
   </main>
 
   <footer>
-    &copy; 2025 A1123309 吳美螢 · Created with 💕 using Power BI
+    &copy; 2025 A1123309 吳美螢 · Made with 💗 & Power BI
   </footer>
 </body>
 </html>
