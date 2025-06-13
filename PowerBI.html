@@ -7,12 +7,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
   <style>
     :root {
-      --pastel-bg: #fff5f9;
-      --primary: #d59ab5;
-      --secondary: #f5d7e8;
-      --text-dark: #333;
-      --text-soft: #666;
-      --white: #fff;
+      --pink-light: #fceef5;
+      --pink-main: #d89ab5;
+      --pink-dark: #b76d95;
+      --card-bg: #ffffff;
+      --text-main: #333;
+      --text-muted: #666;
+      --shadow: rgba(216, 154, 181, 0.15);
     }
 
     * {
@@ -23,20 +24,25 @@
 
     body {
       font-family: 'Montserrat', sans-serif;
-      background-color: var(--pastel-bg);
-      color: var(--text-dark);
+      background: var(--pink-light);
+      color: var(--text-main);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      line-height: 1.6;
+      animation: fadeIn 1s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     header {
-      background: linear-gradient(90deg, var(--primary), var(--secondary));
-      color: var(--white);
-      padding: 60px 20px;
+      background: linear-gradient(90deg, var(--pink-main), var(--pink-dark));
+      color: white;
       text-align: center;
-      box-shadow: 0 4px 16px rgba(213, 154, 181, 0.3);
+      padding: 60px 20px 40px;
+      box-shadow: 0 4px 16px var(--shadow);
     }
 
     header h1 {
@@ -47,35 +53,39 @@
 
     header p {
       font-size: 1.2rem;
-      font-weight: 500;
-      opacity: 0.9;
+      opacity: 0.95;
     }
 
     main {
       flex: 1;
       display: flex;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       padding: 60px 20px;
     }
 
-    .content-wrapper {
-      background: var(--white);
-      border-radius: 16px;
+    .card {
+      background: var(--card-bg);
+      border-radius: 20px;
       padding: 40px;
       max-width: 960px;
       width: 100%;
-      box-shadow: 0 12px 40px rgba(213, 154, 181, 0.1);
-      border: 1px solid #f2cddd;
+      box-shadow: 0 12px 40px var(--shadow);
+      border: 1px solid #f6d8e9;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(216, 154, 181, 0.25);
     }
 
     .section-title {
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--primary);
-      margin-bottom: 20px;
-      font-family: 'Playfair Display', serif;
       text-align: center;
+      font-size: 1.5rem;
+      color: var(--pink-dark);
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 25px;
     }
 
     iframe {
@@ -83,28 +93,28 @@
       height: 550px;
       border: none;
       border-radius: 12px;
-      box-shadow: 0 6px 20px rgba(213, 154, 181, 0.12);
+      box-shadow: 0 6px 20px rgba(216, 154, 181, 0.1);
     }
 
     footer {
-      background-color: var(--primary);
-      color: var(--white);
+      background-color: var(--pink-dark);
+      color: white;
       text-align: center;
       padding: 20px;
       font-size: 0.95rem;
-      box-shadow: 0 -2px 10px rgba(213, 154, 181, 0.2);
+      box-shadow: 0 -2px 10px rgba(216, 154, 181, 0.2);
     }
 
     @media (max-width: 768px) {
       header h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
 
       main {
         padding: 30px 15px;
       }
 
-      .content-wrapper {
+      .card {
         padding: 20px;
       }
 
@@ -118,12 +128,12 @@
 
   <header>
     <h1>POWER BI 個人專題</h1>
-    <p>A1123309 吳美螢 — Elegant Pastel Pink Showcase</p>
+    <p>A1123309 吳美螢 &mdash; Elegant Pastel Dashboard</p>
   </header>
 
   <main>
-    <div class="content-wrapper">
-      <div class="section-title">My Power BI Dashboard</div>
+    <div class="card">
+      <div class="section-title">📊 My Power BI Dashboard</div>
       <iframe title="A1123309_吳美螢_POWER BI 個人專題"
         src="https://app.powerbi.com/view?r=eyJrIjoiNzZhNWVhZjctOWQ0NC00Nzk1LTk0ZTAtOTE1YTg5NWE1NTY4IiwidCI6IjVhNDg0OTUzLTc3ZWYtNDJlYy05MGNmLTJmNGUxMDM3ZmZjNyIsImMiOjEwfQ%3D%3D"
         allowfullscreen="true">
@@ -132,7 +142,7 @@
   </main>
 
   <footer>
-    &copy; 2025 A1123309 吳美螢 · Designed with ❤️ in Elegant Pastel · Powered by Power BI
+    &copy; 2025 A1123309 吳美螢 · Designed with 💕 in Elegant Pastel · Powered by Power BI
   </footer>
 
 </body>
